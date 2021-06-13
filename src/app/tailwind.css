@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+  @apply text-gray-800;
+}
+
+html,
+body {
+  overscroll-behavior-y: contain;
+}
