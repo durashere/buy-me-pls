@@ -1,5 +1,5 @@
-import { useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
+import { useMutation, useQueryClient } from 'react-query';
 
 const deleteItem = async (itemId) => {
   const { data } = await axios.delete(`/api/items/${itemId}`);
