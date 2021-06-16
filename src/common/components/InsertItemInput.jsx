@@ -16,7 +16,7 @@ const InsertItemInput = () => {
   return (
     <form className="bg-white border-t-2" onSubmit={(e) => handleItemCreate(e)}>
       <input
-        className="w-full p-4 text-xl bg-transparent focus:outline-none"
+        className="w-full p-4 text-xl bg-transparent"
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter new item to buy..."

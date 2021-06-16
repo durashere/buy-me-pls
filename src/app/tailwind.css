@@ -11,6 +11,13 @@
   body {
     overscroll-behavior-y: contain;
   }
+
+  input,
+  textarea,
+  button,
+  select {
+    @apply outline-none appearance-none focus:outline-none;
+  }
 }
 
 @layer components {
