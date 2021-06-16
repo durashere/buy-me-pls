@@ -1,14 +1,24 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-* {
-  @apply text-gray-800;
+@layer base {
+  * {
+    @apply text-gray-800;
+  }
+
+  html,
+  body {
+    overscroll-behavior-y: contain;
+  }
 }
 
-html,
-body {
-  overscroll-behavior-y: contain;
+@layer components {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
