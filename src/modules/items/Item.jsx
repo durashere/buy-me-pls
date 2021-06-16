@@ -13,7 +13,7 @@ const Item = ({ item }) => {
     updateItem(updatedItem);
   };
 
-  const handleBlur = (updatedName) => {
+  const handleSubmit = (updatedName) => {
     if (item.name === updatedName) {
       return;
     }
@@ -40,7 +40,7 @@ const Item = ({ item }) => {
       </button>
       <input
         defaultValue={item.name}
-        onBlur={(e) => handleBlur(e.target.value)}
+        onBlur={(e) => handleSubmit(e.target.value)}
         className={classNames('text-xl capitalize w-full bg-transparent', {
           'text-gray-800': !item.bought,
           'text-gray-500 line-through': item.bought,
