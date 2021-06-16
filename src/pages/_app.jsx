@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import PropTypes from 'prop-types';
+
+import DefaultLayout from '@/layouts/default';
 
 import '@/app/tailwind.css';
 
@@ -9,7 +11,9 @@ const CustomApp = ({ Component, pageProps }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
