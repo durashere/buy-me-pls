@@ -7,16 +7,20 @@ const ListBought = ({ items }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpand = () => {
+    if (items.length === 0) {
+      return;
+    }
     setExpanded((previousExpanded) => !previousExpanded);
   };
 
-  if (items.length === 0) {
-    return null;
-  }
-
   return (
     <>
-      <button onClick={handleExpand} type="button" className="flex items-center w-full group">
+      <button
+        id="expand-button"
+        onClick={handleExpand}
+        type="button"
+        className="flex items-center w-full group"
+      >
         <span className="p-4 text-gray-500 material-icons group-hover:text-gray-800">
           {expanded ? 'expand_more' : 'chevron_right'}
         </span>

@@ -18,6 +18,10 @@
   select {
     @apply outline-none appearance-none focus:outline-none;
   }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer components {

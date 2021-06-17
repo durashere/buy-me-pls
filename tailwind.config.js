@@ -10,6 +10,9 @@ module.exports = {
       gridTemplateRows: {
         pancake: 'auto 1fr auto',
       },
+      screens: {
+        'hover-hover': { raw: '(hover: hover)' },
+      },
     },
   },
   variants: {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import useCreateItem from '../reactQuery/mutations/useCreateItem';
+
+import useCreateItem from '@/modules/reactQuery/mutations/useCreateItem';
 
 const NewItem = () => {
   const [currentName, setCurrentName] = useState('');
@@ -16,13 +17,13 @@ const NewItem = () => {
     createItem(newItem);
     setCurrentName('');
 
-    const newItemForm = document.getElementById('items-list');
-    newItemForm.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    const scrollToBottom = document.getElementById('expand-button');
+    scrollToBottom.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
 
   return (
     <form
-      className="sticky bottom-0 flex items-center bg-white group h-14 ring-2 ring-gray-200"
+      className="sticky bottom-0 flex bg-white group h-14 ring-2 ring-gray-200"
       onSubmit={handleSubmit}
     >
       <span className="p-4 text-gray-500 select-none material-icons-outlined">add</span>

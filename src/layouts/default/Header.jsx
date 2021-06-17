@@ -1,9 +1,5 @@
 const Header = () => {
-  return (
-    <div className="grid grid-cols-3 p-4 bg-white ring-2 ring-gray-200">
-      <span className="col-start-2 text-center">~ Buy me pls ~</span>
-    </div>
-  );
+  return <span className="p-4 text-center select-none ring-2 ring-gray-200">~ Buy me pls ~</span>;
 };
 
 export default Header;

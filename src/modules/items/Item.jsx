@@ -51,7 +51,7 @@ const Item = ({ item }) => {
         })}
       />
       <button
-        className="hidden p-4 text-gray-500 hover:text-gray-800 material-icons group-hover:block group-focus-within:block"
+        className="hidden p-4 text-gray-500 hover:text-gray-800 material-icons hover-hover:group-hover:block group-focus-within:block"
         type="button"
         onClick={handleDeleteItem}
       >

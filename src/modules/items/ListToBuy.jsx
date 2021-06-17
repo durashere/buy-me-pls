@@ -4,7 +4,7 @@ import Item from '@/modules/items/Item';
 
 const ListToBuy = ({ items }) => {
   return (
-    <ul id="items-list">
+    <ul>
       {items
         .filter((item) => !item.bought)
         .map((item) => (
