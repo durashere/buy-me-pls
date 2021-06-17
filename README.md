@@ -1,14 +1,14 @@
 <p align="center">
   <a href="https://github.com/durashere/buy-me-pls">
-    <img src="public/1440x768.png" alt="Overview screenshot" >
+    <img src="public/425x768.png" width='300' alt="Overview screenshot" >
   </a>
-  <h3 align="center">Buy me pls</h3>
+  <h3 align="center">~ Buy me pls ~</h3>
 
   <p align="center">
     Hobbyst grocery list app... for now...
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://buy-me-pls.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/durashere/buy-me-pls/issues">Report Bug</a>
     ·
@@ -34,6 +34,8 @@ To get a local copy up and running follow these simple example steps.
   # or
   npm install yarn -g
   ```
+
+* MongoDB URI
 
 ### Installation
 
