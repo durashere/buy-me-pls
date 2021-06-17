@@ -17,6 +17,7 @@ const Item = ({ item }) => {
     if (item.name === updatedName) {
       return;
     }
+
     if (updatedName.length === 0) {
       deleteItem(item._id);
     }
@@ -30,7 +31,10 @@ const Item = ({ item }) => {
   };
 
   return (
-    <li key={item._id} className="flex items-center group focus-within:ring-1 ring-gray-200">
+    <li
+      key={item._id}
+      className="flex items-center select-none h-14 group focus-within:ring-1 ring-gray-200"
+    >
       <button
         className="p-4 text-gray-500 material-icons-outlined hover:text-gray-800"
         type="button"
@@ -41,7 +45,7 @@ const Item = ({ item }) => {
       <input
         defaultValue={item.name}
         onBlur={(e) => handleSubmit(e.target.value)}
-        className={classNames('text-xl capitalize w-full bg-transparent', {
+        className={classNames('text-xl capitalize w-full h-full bg-transparent', {
           'text-gray-800': !item.bought,
           'text-gray-500 line-through': item.bought,
         })}

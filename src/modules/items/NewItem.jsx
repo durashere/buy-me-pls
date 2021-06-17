@@ -6,20 +6,23 @@ const NewItem = () => {
   const { mutate: createItem } = useCreateItem();
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (currentName.length === 0) {
       return;
     }
 
-    e.preventDefault();
-
     const newItem = { name: currentName };
     createItem(newItem);
     setCurrentName('');
+
+    const newItemForm = document.getElementById('items-list');
+    newItemForm.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
 
   return (
     <form
-      className="flex items-center group focus-within:ring-1 ring-gray-200"
+      className="sticky bottom-0 flex items-center bg-white group h-14 ring-2 ring-gray-200"
       onSubmit={handleSubmit}
     >
       <span className="p-4 text-gray-500 select-none material-icons-outlined">add</span>
@@ -27,8 +30,8 @@ const NewItem = () => {
         value={currentName}
         onBlur={handleSubmit}
         onChange={(e) => setCurrentName(e.target.value)}
-        className="w-full text-xl bg-transparent"
-        placeholder="New item to add..."
+        className="w-full h-full text-xl capitalize bg-transparent"
+        placeholder="item"
       />
     </form>
   );
